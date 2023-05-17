@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/leo.nguyentuong/jscan/issues"
   },
-  "homepage": "https://gitlab.com/leo.nguyentuong/jscan#readme"
+  "homepage": "https://gitlab.com/leo.nguyentuong/jscan#readme",
+  "dependencies": {
+    "acorn": "^8.8.2"
+  }
 }
