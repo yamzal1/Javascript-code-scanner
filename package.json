@@ -1,0 +1,19 @@
+{
+  "name": "jscan",
+  "version": "1.0.0",
+  "description": "JavaScript code reviewer",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/leo.nguyentuong/jscan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/leo.nguyentuong/jscan/issues"
+  },
+  "homepage": "https://gitlab.com/leo.nguyentuong/jscan#readme"
+}
