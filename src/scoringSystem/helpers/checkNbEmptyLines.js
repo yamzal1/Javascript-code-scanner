@@ -2,7 +2,7 @@ module.exports = function checkNbEmptyLines(input){ // returns the maximum amoun
     let max = 0                                     // consecutives empty lines in an input
     let lines = input.split('\n')
     let cpt = 0
-    for(let i = 0;i<lines.length();i++){
+    for(let i = 0;i<lines.length;i++){
         if(cpt > max) max = cpt
         if(!isEmpty(lines[i])) cpt = 0
         else{

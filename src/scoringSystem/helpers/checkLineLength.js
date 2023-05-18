@@ -3,5 +3,5 @@ module.exports = function checkLineLength(lineString){
     for(let char of lineString){
         if(char === ' ') cpt++
     }
-    return lineString.length() - cpt
+    return lineString.length - cpt
 }
