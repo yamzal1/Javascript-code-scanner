@@ -4,7 +4,8 @@
   "description": "JavaScript code reviewer",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/index.js"
+    "dev": "node src/index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://gitlab.com/leo.nguyentuong/jscan#readme",
   "dependencies": {
-    "acorn": "^8.8.2"
+    "acorn": "^8.8.2",
+    "acorn-walk": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
