@@ -1,5 +1,5 @@
-const noCommentedCode = require('./rules/noCommentedCode.js')
+const helpers = require('./helpers')
 
 module.exports = function calculateScore(tree){
-    return 5
+    return 0
 }
