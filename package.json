@@ -19,5 +19,8 @@
   "dependencies": {
     "acorn": "^8.8.2",
     "acorn-walk": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
