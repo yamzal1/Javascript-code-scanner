@@ -32,5 +32,5 @@ module.exports = function checkNamingConventions(AST, conventions = ['camelCase'
         }
     });
 
-    console.log(nonConformingCount);
+    return nonConformingCount;
 }

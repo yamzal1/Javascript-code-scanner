@@ -3,10 +3,10 @@ module.exports = function checkNbEmptyLines(input){ // returns the maximum amoun
     let lines = input.split('\n')
     let cpt = 0
     for(let i = 0;i<lines.length;i++){
-        if(cpt > max) max = cpt
         if(!isEmpty(lines[i])) cpt = 0
         else{
             cpt++
+            if(cpt > max) max = cpt
             continue
         }
     }
@@ -14,9 +14,9 @@ module.exports = function checkNbEmptyLines(input){ // returns the maximum amoun
     return max
 }
 
-function isEmpty(string){
+function isEmpty(str){
     if (!/\S/.test(str)) {
-        return false
+        return true
     }
-    return true
+    return false
 }

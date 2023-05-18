@@ -11,6 +11,6 @@ module.exports = function generateSyntaxTreeJS(input){
         parser: Parser,
         comments: comments,
         tree: tree,
-        inputText: input
+        string: input
     }
 }

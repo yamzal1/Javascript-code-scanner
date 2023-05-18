@@ -1,7 +1,8 @@
 module.exports = function checkLineLength(lineString){
-    let cpt = 0
+    let indentLength = 0
     for(let char of lineString){
-        if(char === ' ') cpt++
+        if(char === ' ') indentLength++
+        else break
     }
-    return lineString.length - cpt
+    return lineString.length - indentLength
 }
