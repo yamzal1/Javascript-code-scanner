@@ -17,6 +17,7 @@
   },
   "homepage": "https://gitlab.com/leo.nguyentuong/jscan#readme",
   "dependencies": {
-    "acorn": "^8.8.2"
+    "acorn": "^8.8.2",
+    "acorn-walk": "^8.2.0"
   }
 }
