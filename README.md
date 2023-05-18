@@ -1,21 +1,5 @@
 # JScan
 
-## File structure
-```
-/src
-    index.js
-    /js
-        index.js
-        /acornFiles
-    /scoringSystem
-        index.js
-        /rules
-            checkNbLines.js
-            ...
-        configurationParser.js
-        scoring.js
-    /configuration
-```
 
 ## Prerequisites
 
@@ -28,4 +12,10 @@ npm install
 
 ```
 npm run dev
+```
+
+## How to test
+
+```
+npm test
 ```
