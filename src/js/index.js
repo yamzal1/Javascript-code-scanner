@@ -1,6 +1,16 @@
-const acorn = require('acorn')
 const {Parser} = require('acorn')
-const generateSyntaxTree = require('src/index.js')
-const calculateScore = require('src/scoringSystem/index.js')
+//const calculateScore = require('src/scoringSystem/index.js')
 
-let score = calculateScore(generateSyntaxTree(input, Parser))
+//let score = calculateScore(generateSyntaxTree(input, Parser))
+
+
+module.exports = function generateSyntaxTreeJS(input){
+    let comments = []
+    let tree = Parser.parse(input, {ecmaVersion: "latest", onComment: (b, t)=> comments.push(t)})
+    return {
+        parser: Parser,
+        comments: comments,
+        tree: tree,
+        inputText: input
+    }
+}
