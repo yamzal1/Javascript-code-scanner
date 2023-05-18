@@ -19,3 +19,7 @@ npm run dev
 ```
 npm test
 ```
+OR
+```
+node src/index.js path/to/test.js
+```
