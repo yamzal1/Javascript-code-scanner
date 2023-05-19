@@ -8,7 +8,7 @@ test('should detect incorrect naming conventions', () => {
         let my_variable = 2;
         let MyVariable = 3;
     `;
-    const AST = acorn.Parser.parse(code);
+    const AST = acorn.Parser.parse(code, {ecmaVersion:2020});
 
     expect(checkNamingConventions(AST, ['camelCase'])).toBe(2);
 });
@@ -19,7 +19,7 @@ test('should not report correct naming conventions', () => {
         let anotherVariable = 2;
         let thirdVariable = 3;
     `;
-    const AST = acorn.Parser.parse(code);
+    const AST = acorn.Parser.parse(code, {ecmaVersion:2020});
 
     expect(checkNamingConventions(AST, ['camelCase'])).toBe(0);
 });
@@ -30,7 +30,7 @@ test('should handle multiple naming conventions', () => {
         let another_variable = 2;
         let ThirdVariable = 3;
     `;
-    const AST = acorn.Parser.parse(code);
+    const AST = acorn.Parser.parse(code, {ecmaVersion:2020});
 
     expect(checkNamingConventions(AST, ['camelCase', 'snake_case', 'PascalCase'])).toBe(0);
 });
@@ -41,7 +41,7 @@ test('should handle no naming conventions', () => {
         let another_variable = 2;
         let ThirdVariable = 3;
     `;
-    const AST = acorn.Parser.parse(code);
+    const AST = acorn.Parser.parse(code, {ecmaVersion:2020});
 
     expect(checkNamingConventions(AST, [])).toBe(3);
 });
