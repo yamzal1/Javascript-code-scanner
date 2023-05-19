@@ -25,5 +25,5 @@ module.exports = function checkVariablesExplicit(AST) {
     }
   }
 
-  //console.log('Nombre de variables implicites :', implicitVariablesCount);
+  return implicitVariablesCount;
 };

@@ -1,7 +1,5 @@
 const {Parser} = require('acorn')
-//const calculateScore = require('src/scoringSystem/index.js')
-
-//let score = calculateScore(generateSyntaxTree(input, Parser))
+const walk = require('acorn-walk')
 
 
 module.exports = function generateSyntaxTreeJS(input){
@@ -11,6 +9,7 @@ module.exports = function generateSyntaxTreeJS(input){
         parser: Parser,
         comments: comments,
         tree: tree,
-        string: input
+        string: input,
+        walk: walk
     }
 }

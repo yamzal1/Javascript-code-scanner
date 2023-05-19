@@ -9,3 +9,5 @@ const input = fs.readFileSync(path).toString()
 
 let score = scoringSystem(treeGenerator(input))
 
+console.log("SCORE",score)
+
