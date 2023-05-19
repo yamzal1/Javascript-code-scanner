@@ -24,6 +24,7 @@ module.exports = function checkVariablesExplicit(AST) {
       }
     }
   }
+  return implicitVariablesCount; 
 
   return implicitVariablesCount;
 };
