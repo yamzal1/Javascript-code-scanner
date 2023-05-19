@@ -1,7 +1,7 @@
 const helpers = require('./helpers')
 const parseConfigFile = require('../configurationParser.js')
 
-defaults = parseConfigFile('../config/config.json')
+defaults = parseConfigFile('./config/config.json')
 module.exports = function calculateScore(input) { //input is an object: {tree, string, comments, parser, walk}
     let finalScore = 0
 
