@@ -19,7 +19,7 @@ npm run dev
 ```
 npm test
 ```
-OR from the root of the project
+OR from the root of the project:
 ```
 node src/index.js path/to/test.js
 ```
