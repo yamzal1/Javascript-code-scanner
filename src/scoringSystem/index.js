@@ -5,9 +5,6 @@ defaults = parseConfigFile('./config/config.json')
 module.exports = function calculateScore(input) { //input is an object: {tree, string, comments, parser, walk}
     let finalScore = 0
 
-    let indentErrors = helpers.checkIndent(input.string, [...input.parser.tokenizer(input.string, {locations: true})])
-    console.log("[Indentation errors] Lines:", Array.from(indentErrors))
-
     let fileSize = helpers.checkFileSize(input.string)
     let fileSizeScore = 1
     if (fileSize > defaults["max-file-length"].value) {
@@ -20,9 +17,11 @@ module.exports = function calculateScore(input) { //input is an object: {tree, s
     }
     finalScore += fileSizeScore * defaults["max-file-length"].weight
 
+    let indentErrors = helpers.checkIndent(input.string, [...input.parser.tokenizer(input.string, {locations: true})])
     let indentErrorCount = indentErrors.size
     let indentScore = 1
     if (indentErrorCount > defaults.indentation.value) {
+        console.log("[Indentation errors] Lines:", Array.from(indentErrors))
         for (let c of defaults.indentation.criteria) {
             if (indentErrorCount < c["error-count"]) break
             indentScore = c.score
